@@ -1,12 +1,12 @@
-/* estilo.css
+/* acceder.css
  * Este archivo provee diseño css.
  */
 
-body,html
+body
 {
 	font-family: Tahoma, Geneva, sans-serif;
-	color: #fff;
-	background-image: url("Fondo2.png");
+	color: #aaa;
+	background-image: url(fondo2.png);
 	background-size: cover;
 	
 	
