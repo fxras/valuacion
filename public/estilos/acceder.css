@@ -6,7 +6,7 @@ body,html
 {
 	font-family: Tahoma, Geneva, sans-serif;
 	color: #fff;
-	background: url("imagenes/fondo.jpg");
+	background-image: url(fondo.jpg);
 	background-size: cover;
 	
 	
