@@ -1,7 +1,3 @@
-/* acceder.css
- * Este archivo provee diseño css.
- */
-
 body
 {
 	font-family: Tahoma, Geneva, sans-serif;
@@ -10,20 +6,20 @@ body
 	background-repeat: no-repeat;
 	background-size: 125%;
 }
-.acceder
+.regis
 {
-	background: rgba(44,62,80,0.7);
-	padding: 40px;
-	width: 250px;
-	margin: auto;
-	margin-top: 80px;
-	height: 400px;
-	margin-left: 180x;
+    background: rgba(44,62,80,0.7);
+    padding: 40px;
+    width: 250px;
+    height: 430px;
+    margin-top: 90px;
+    margin-left: 180px;
+    margin: 0 auto;
+    margin-top: 90px;
 }
-form
-{
-	width: 240px;
-	text-align: center;
+form{
+    width: 240px;
+    text-align: center;
 }
 input
 {
@@ -59,22 +55,7 @@ input[type=button]:hover
 }
 h2
 {
-	color:white;
-}
-a
-{
-	color: yellow;
-	text-decoration: blink;
-}
-a:hover
-{
-	color: skyblue;
-}
-.contenedor
-{
-	display: flex;
-	flex-direcction: row;
-	width: 100%
+	color: #000;
 }
 ::placeholder {
 	color:aliceblue;
