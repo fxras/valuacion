@@ -9,6 +9,45 @@
     <link rel="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
   </head>
 
+<style>
+#mensaje {
+  visibility: hidden;
+  min-width: 250px;
+  background-color: yellow;
+  color: #000;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  right: 35%;
+  top: 30px;
+  font-size: 17px;
+  margin-right: 30px;
+}
+#mensaje.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+@-webkit-keyframes fadein {
+from (top: 0; opacity: 0;)
+to (top: 30px; opacity: 1;)
+}
+@keyframes fadein {
+  from (top: 0; opacity: 0;)
+to (top: 30px; opacity: 1;)
+}
+@-webkit-keyframes fadeout {
+  from (top: 30px; opacity: 1;)
+  to (top: 0; opacity: 0;)
+}
+@keyframes fadeout {
+  from (top: 30px; opacity: 1;)
+  to (top: 0; opacity: 0;);
+}
+</style>
+
   <body>
     <div class="regis">
       <form>
@@ -18,8 +57,19 @@
         <input type="password" name="contraseña" placeholder="Contraseña"><br><br>
         <input type="password" name="contraseña" placeholder="Confirmar Contraseña"><br><br>
         <input type="text" name="correo" placeholder="Correo Electrónico"><br><br>
-        <input type="button" value="Registrarse"><br><br>
+        <input type="button" value="Registrarse" onclick="mifuncion()"><br><br>
             <div id="mensaje">Tu cuenta se ha registrado exitosamente!!!</div>
+    <script>
+    function mifuncion() {
+        var x = document.getElementById("mensaje");
+        x.className = "show";
+        setTimeout(function(){x.className =
+        x.className.replace("show", ""); }, 3000);
+    }
+    </script>
+        Tienes una cuenta?<a href="index.html" style="text-
+        decoration: none; font-family: 'Play', sans-serif;
+        color: yellow;">&nbsp;acceder</a>
       </form>
     </div>
   </body>

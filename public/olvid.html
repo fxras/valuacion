@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Inicio de Sesión</title>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html">
+    <link rel="stylesheet" href="estilos/olvid.css" type="text/css">
+    <link rel="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
+</head>
+
+<style>
+  #mensaje {
+    visibility: hidden;
+    min-width: 250px;
+    background-color: yellow;
+    color: #000;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    right: 35%;
+    top: 30px;
+    font-size: 17px;
+    margin-right: 30px;
+  }
+  #mensaje.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+  @-webkit-keyframes fadein {
+  from (top: 0; opacity: 0;)
+  to (top: 30px; opacity: 1;)
+  }
+  @keyframes fadein {
+    from (top: 0; opacity: 0;)
+  to (top: 30px; opacity: 1;)
+  }
+  @-webkit-keyframes fadeout {
+    from (top: 30px; opacity: 1;)
+    to (top: 0; opacity: 0;)
+  }
+  @keyframes fadeout {
+    from (top: 30px; opacity: 1;)
+    to (top: 0; opacity: 0;);
+  }
+  </style>
+  
+<body>
+<div class="olvid">
+  <form>
+    <h2 align="center" style="color:#fff;">Olvidó su Contraseña</h2>
+    <h5 style="font-size:14px; color:yellow;">Ingresa el correo electrónico que usas en tu cuenta.
+    Nosotros te enviaremos un vínculo para reestablecer tu contraseña.</h5>
+    <input type="text" name="usuario" placeholder="Correo Electrónico" /><br /><br />
+    <input type="button" value="Enviar" onclick="mifuncion()"/><br /><br />
+    <a href="index.html" style="text-decoration: none;">Ir a la Página Inicial</a><br /><br />
+    <div id="mensaje">El vínculo para reestablecer ha sido eniado a tu correo con éxito!!</div>
+
+    <script>
+    function mifuncion() {
+      var x = document.getElementById("mensaje");
+      x.className = "show";
+      setTimeout(function(){x.className =
+      x.className.replace("show","");},3000);
+    }
+    </script>
+  </form>
+</div>
+</body>
+</html>
