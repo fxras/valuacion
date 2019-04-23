@@ -1,11 +1,12 @@
 /*eslint-env node*/
-
+/*
 if (process.env.VCAP_SERVICES) {
   process.env.CLOUDANT_URL = JSON.parse(process.env.VCAP_SERVICES)
                                  .cloudantNoSQLDB[0].credentials.url;
 } else { // Otherwise look for .env, which is a file of name/value pairs
   require('dotenv').config({silent: true});
 }
+*/
 
 //------------------------------------------------------------------------------
 // node.js starter application for Bluemix
