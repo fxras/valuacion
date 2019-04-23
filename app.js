@@ -1,16 +1,15 @@
-/*eslint-env node*/
-/*
 if (process.env.VCAP_SERVICES) {
   process.env.CLOUDANT_URL = JSON.parse(process.env.VCAP_SERVICES)
                                  .cloudantNoSQLDB[0].credentials.url;
 } else { // Otherwise look for .env, which is a file of name/value pairs
   require('dotenv').config({silent: true});
 }
-*/
 
-//------------------------------------------------------------------------------
-// node.js starter application for Bluemix
-//------------------------------------------------------------------------------
+// The default port number MUST be whatever the Cloud Foundry environment
+// has defined in the PORT variable. Otherwise your app will fail to deploy
+// to Bluemix with a mysterious health check error.
+const port = process.env.PORT || 8080;
+
 
 // This application uses express as its web server
 // for more info, see: http://expressjs.com
